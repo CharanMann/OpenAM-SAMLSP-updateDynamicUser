@@ -33,14 +33,13 @@ OpenAM Configuration:
 =====================
 1. Build the custom plugin by using maven. 
 2. Navigate to Federation > Entity Providers > (SP Hosted Entity) > Assertion Processing. Specify 'org.forgerock.openam.saml2.plugins.examples.UpdateDynamicUserSPAttMapper' under Attribute Mapper. 
-3. Deploy openam-samlSP-updateDynamicUser-1.0.jar under <OpenAM-Tomcat>/webapps/openam/WEB-INF/lib
+3. Deploy openam-samlSP-updateDynamicUser-1.0.jar under (OpenAM-Tomcat)/webapps/openam/WEB-INF/lib
 4. Restart OpenAM
   
 Testing:
 ======== 
-* 
-
-
+* Create dynamic user on OpenAM SP
+* Update this user attributes at IdP side and initiate SAML flow. Updated attributes at IdP side should be persisted in OpenAM SP datastore.  
 
 
 * * *
