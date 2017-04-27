@@ -91,7 +91,7 @@ public class UpdateDynamicUserSPAttMapper extends DefaultSPAttributeMapper {
                     // If the attribute is not already there in User store, then add the SAML assertion values
                     if (!existingUserAttrMap.containsKey(attribute)) {
                         if(debug.messageEnabled()) {
-                            debug.message("UpdateDynamicUserSPAttMapper.getAttribute: New attribute in SAML assertion that will be persisted");
+                            debug.message("UpdateDynamicUserSPAttMapper.getAttribute: New attribute in SAML assertion that will be persisted: " + attribute);
                         }
                         updatedUserAttrMap.put(attribute, samlUserAttrMap.get(attribute));
                     }
@@ -99,7 +99,7 @@ public class UpdateDynamicUserSPAttMapper extends DefaultSPAttributeMapper {
                     // If existingUserAttrMap attribute are different from samlUserAttrMap attribute values
                     else if (!existingUserAttrMap.get(attribute).equals(samlUserAttrMap.get(attribute))) {
                         if(debug.messageEnabled()) {
-                            debug.message("UpdateDynamicUserSPAttMapper.getAttribute: Updated attribute in SAML assertion that will be persisted");
+                            debug.message("UpdateDynamicUserSPAttMapper.getAttribute: Updated attribute in SAML assertion that will be persisted: " + attribute);
                         }
                         updatedUserAttrMap.put(attribute, samlUserAttrMap.get(attribute));
                     }
