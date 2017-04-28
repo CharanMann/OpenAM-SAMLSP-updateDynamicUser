@@ -6,8 +6,7 @@
 
 Disclaimer of Liability :
 =========================
-This repository contain code created and maintained by the community of forgerock users and other open source contributors.
-In some cases the code may have been created by ForgeRock for community development subject to the license for specific
+This is an unsupported code made available by ForgeRock for community development subject to the license for specific
 language governing permission and limitations under the license.
 
 The code is provided on an "as is" basis, without warranty of any kind, to the fullest extent permitted by law. 
