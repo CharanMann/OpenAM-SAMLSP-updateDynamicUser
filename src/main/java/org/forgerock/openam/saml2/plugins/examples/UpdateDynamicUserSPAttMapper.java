@@ -33,7 +33,7 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * This calls extends {@link DefaultSPAttributeMapper} to update attributes present in SAML assertion to OpenAM datastore
+ * This class extends {@link DefaultSPAttributeMapper} to update attributes present in SAML assertion to OpenAM datastore
  */
 public class UpdateDynamicUserSPAttMapper extends DefaultSPAttributeMapper {
 
@@ -41,6 +41,7 @@ public class UpdateDynamicUserSPAttMapper extends DefaultSPAttributeMapper {
 
     static {
         try {
+            // Initialize dataStoreProvider
             dataStoreProvider = SAML2Utils.getDataStoreProvider();
         } catch (SAML2Exception e) {
             debug.error("UpdateDynamicUserSPAttMapper.static initialization failed " +
